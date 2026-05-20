@@ -111,12 +111,7 @@ export default function WeddingInvitation() {
         "--text-heading": colors.textHeading,
         "--text-body": colors.textBody,
         "--accent-green": colors.accentGreen,
-        "--deep-accent-green": colors.deepAccentGreen,
-        backgroundImage: "url('/assets/site-background.png')",
-        backgroundRepeat: "repeat-y",
-        backgroundSize: "auto 100vh",
-        backgroundPosition: "center top",
-        backgroundAttachment: "scroll"
+        "--deep-accent-green": colors.deepAccentGreen
       }}
     >
       <section className="mx-auto max-w-6xl px-5 pb-16 pt-20 text-center sm:px-8 sm:pt-28">
