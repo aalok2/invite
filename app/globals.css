@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  background: #fdfbf7;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), sans-serif;
+}
