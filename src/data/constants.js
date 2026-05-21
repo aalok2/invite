@@ -41,7 +41,7 @@ export const WEDDING_CONTENT = {
     heading: "Our Engagement Venue",
     bodyText:
       "We are thrilled to invite you to celebrate our special day at the beautiful",
-    venueName: "TORWN HALL, FLUENTGRID LIMITED",
+    venueName: "TOWN HALL, FLUENTGRID LIMITED",
     location: "HILL NO. 1, PLOT NO. 2, RUSHIKONDA, MADHURAWADA, VISAKHAPATNAM",
     action: {
       label: "NAVIGATE TO VENUE",
