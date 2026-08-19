@@ -1,8 +1,8 @@
 export const WEDDING_CONTENT = {
   seo: {
-    title: "Sri Moulika & Sai Viswanath | Wedding Invitation",
+    title: "Sri Moulika & Sai Vishwanath | Wedding Invitation",
     description:
-      "Join us in celebrating the wedding festivities of Sri Moulika and Sai Viswanath."
+      "Join us in celebrating the wedding festivities of Sri Moulika and Sai Vishwanath."
   },
   colors: {
     bgPrimary: "#FDFBF7",
@@ -19,14 +19,14 @@ export const WEDDING_CONTENT = {
     ariaLabel: "Reveal the wedding invitation"
   },
   hero: {
-    names: "Sri Moulika & Sai Viswanath",
+    names: "Sri Moulika & Sai Vishwanath",
     dateLabel: "SEPTEMBER 3-5, 2026"
   },
   welcomeCountdown: {
     backgroundMedia: {
       type: "none"
     },
-    names: "Sri Moulika & Sai Viswanath",
+    names: "Sri Moulika & Sai Vishwanath",
     tagline: "Together, we celebrate our wedding festivities",
     weddingDateText: "Festivities Begin: SEPTEMBER 3, 2026",
     weddingDateISO: "2026-09-03T09:00:00+05:30",
@@ -64,12 +64,12 @@ export const WEDDING_CONTENT = {
       },
       {
         id: "mehendi-sep3-evening",
-        title: "Mehandi",
+        title: "Mehendi",
         date: "SEPTEMBER 3 | EVENING",
         media: {
           type: "image",
           src: "mehendi-image",
-          alt: "Mehandi ceremony invitation"
+          alt: "Mehendi ceremony invitation"
         }
       },
       {
@@ -147,7 +147,7 @@ export const WEDDING_CONTENT = {
           {
             id: "p",
             label: "P",
-            fullName: "Sai Viswanath"
+            fullName: "Sai Vishwanath"
           },
           {
             id: "b",
