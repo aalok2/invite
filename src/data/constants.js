@@ -45,7 +45,7 @@ export const WEDDING_CONTENT = {
     location: "VISAKHAPATNAM",
     action: {
       label: "NAVIGATE TO VENUE",
-      href: "https://maps.app.goo.gl/6YSFwPdyHmqSNQtXA"
+      href: "https://maps.app.goo.gl/ZkZQgAx1kQGcuD2CA"
     }
   },
   events: {
