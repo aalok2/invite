@@ -3,6 +3,19 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { WEDDING_CONTENT } from "@/src/data/constants";
+import cocktailImage from "./Cocktail.jpeg";
+import haldiImage from "./haldi.jpeg";
+import mehendiImage from "./mehendi.jpeg";
+import pelliKuthuruImage from "./Pelli Kuthuru 3.jpeg";
+import pelliImage from "./Pelli .jpeg";
+
+const LOCAL_EVENT_MEDIA = {
+  "cocktail-image": cocktailImage.src,
+  "haldi-image": haldiImage.src,
+  "mehendi-image": mehendiImage.src,
+  "pelli-kuthuru-image": pelliKuthuruImage.src,
+  "pelli-image": pelliImage.src
+};
 
 function calculateTimeLeft(targetDate) {
   const now = new Date().getTime();
@@ -54,7 +67,8 @@ function Countdown({ content }) {
 }
 
 function EventMedia({ media }) {
-  const [isImageBroken, setIsImageBroken] = useState(false);
+  const [isMediaBroken, setIsMediaBroken] = useState(false);
+  const resolvedSrc = media?.src ? LOCAL_EVENT_MEDIA[media.src] || media.src : "";
 
   if (media.type === "placeholder") {
     return (
@@ -73,7 +87,7 @@ function EventMedia({ media }) {
     );
   }
 
-  if (isImageBroken) {
+  if (isMediaBroken) {
     return (
       <div className="relative mx-auto h-[26rem] w-full max-w-[16rem] overflow-hidden rounded-2xl sm:h-[30rem] sm:max-w-[18rem]">
         <div
@@ -84,24 +98,39 @@ function EventMedia({ media }) {
           }}
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 p-4 text-center text-xs font-semibold uppercase tracking-[0.2em] text-white">
-          Add event image in public/assets
+          Add event media in public/assets
         </div>
       </div>
     );
   }
 
+  if (media.type === "video") {
+    return (
+      <video
+        src={resolvedSrc}
+        poster={media.poster}
+        className="mx-auto h-[26rem] w-full max-w-[16rem] rounded-2xl object-cover sm:h-[30rem] sm:max-w-[18rem]"
+        controls
+        playsInline
+        preload="metadata"
+        onError={() => setIsMediaBroken(true)}
+      />
+    );
+  }
+
   return (
     <img
-      src={media.src}
+      src={resolvedSrc}
       alt={media.alt}
       className="mx-auto h-[26rem] w-full max-w-[16rem] rounded-2xl object-cover sm:h-[30rem] sm:max-w-[18rem]"
-      onError={() => setIsImageBroken(true)}
+      onError={() => setIsMediaBroken(true)}
     />
   );
 }
 
 export default function WeddingInvitation() {
-  const { colors, hero, welcomeCountdown, venue, events, footer } = WEDDING_CONTENT;
+  const { colors, hero, welcomeCountdown, venue, events, combinedVideo, footer } = WEDDING_CONTENT;
+  const [isCombinedVideoBroken, setIsCombinedVideoBroken] = useState(false);
 
   return (
     <main
@@ -209,6 +238,32 @@ export default function WeddingInvitation() {
             </motion.article>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-5 pb-16 text-center sm:px-8 sm:pb-24">
+        <h2 className="font-serif text-3xl text-[var(--text-heading)] sm:text-4xl">{combinedVideo.heading}</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-lg">{combinedVideo.description}</p>
+
+        {!isCombinedVideoBroken ? (
+          <div className="mx-auto mt-8 w-full max-w-md rounded-2xl border border-white/70 bg-black shadow-md">
+            <video
+              className="h-auto max-h-[80vh] w-full rounded-2xl object-contain"
+              src={combinedVideo.media.src}
+              poster={combinedVideo.media.poster}
+              controls
+              playsInline
+              preload="metadata"
+              onError={() => setIsCombinedVideoBroken(true)}
+            />
+          </div>
+        ) : (
+          <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-white/70 bg-white/45 p-8 text-center shadow-md">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--text-body)]">
+              Add your combined video file to public/assets
+            </p>
+            <p className="mt-3 font-mono text-sm text-[var(--text-heading)]">/assets/wedding-combined.mp4</p>
+          </div>
+        )}
       </section>
 
       {/* Celebrate With Us section commented out for now. */}
