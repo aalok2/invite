@@ -41,8 +41,8 @@ export const WEDDING_CONTENT = {
     heading: "Our Wedding Venue",
     bodyText:
       "We are thrilled to invite you to celebrate our special day at the beautiful",
-    venueName: "TOWN HALL, FLUENTGRID LIMITED",
-    location: "HILL NO. 1, PLOT NO. 2, RUSHIKONDA, MADHURAWADA, VISAKHAPATNAM",
+    venueName: "CENTENARY HALL, WALTAIR CLUB",
+    location: "VISAKHAPATNAM",
     action: {
       label: "NAVIGATE TO VENUE",
       href: "https://maps.app.goo.gl/tjBaWhbYQ9itVVBL6"
