@@ -249,7 +249,7 @@ export default function WeddingInvitation() {
             <video
               className="h-auto max-h-[80vh] w-full rounded-2xl object-contain"
               src={combinedVideo.media.src}
-              poster={combinedVideo.media.poster}
+              poster={pelliImage.src}
               controls
               playsInline
               preload="metadata"

@@ -109,8 +109,7 @@ export const WEDDING_CONTENT = {
     description:
       "A combined video for all ceremonies.",
     media: {
-      src: "/assets/WhatsApp%20Video%202026-08-07%20at%2023.24.01%20(1).mp4",
-      poster: "/assets/engagement.jpeg"
+      src: "/assets/WhatsApp%20Video%202026-08-07%20at%2023.24.01%20(1).mp4"
     }
   },
   guestInteraction: {
